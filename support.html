@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — TAG Connect | TAG Construction Limited</title>
+  <meta name="description" content="Help and support for the TAG Connect app from TAG Construction Limited: contact details, common questions and account deletion.">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <style>
+    /* TAG Connect design tokens (apps/mobile/constants/tokens.ts, mobile profile) */
+    :root {
+      --maroon: #6B1015;
+      --maroon-hi: #581015;
+      --red: #C8232C;
+      --red-dark: #A41D25;
+      --ink: #1C1A18;
+      --ink-2: #4A4742;
+      --line: #DCD8D1;
+      --line-lo: #EEEAE3;
+      --wash: #FAF8F4;
+      --white: #FFFFFF;
+      --on-maroon-2: rgba(255, 255, 255, 0.85);
+      --on-maroon-3: rgba(255, 255, 255, 0.70);
+      --on-maroon-chip: rgba(255, 255, 255, 0.12);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--wash);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .banner {
+      background: var(--maroon);
+      color: var(--white);
+      padding: 40px 24px 56px;
+    }
+    .banner-inner { max-width: 760px; margin: 0 auto; }
+    .logo { display: block; height: 60px; width: auto; max-width: 100%; margin: 0 0 28px -6px; }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--on-maroon-chip);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin: 0 0 14px;
+    }
+
+    .banner h1 {
+      font-size: clamp(26px, 4.5vw, 34px);
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      margin: 0 0 10px;
+    }
+    .banner p { margin: 0; color: var(--on-maroon-2); font-size: 15px; line-height: 1.45; max-width: 560px; }
+    .banner .updated { margin-top: 16px; font-size: 13px; color: var(--on-maroon-3); }
+
+    main { max-width: 760px; margin: -28px auto 0; padding: 0 24px 64px; }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line-lo);
+      border-radius: var(--radius-lg);
+      padding: 4px 28px 32px;
+      box-shadow: 0 2px 10px rgba(28, 26, 24, 0.06);
+    }
+
+    section { padding-top: 28px; }
+
+    h2 {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--maroon);
+      font-weight: 700;
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line-lo);
+    }
+    h3 { font-size: 16px; font-weight: 600; margin: 18px 0 8px; color: var(--ink); }
+
+    p { margin: 0 0 14px; }
+    ul, ol { margin: 0 0 14px; padding-left: 22px; }
+    li { margin-bottom: 8px; }
+    ul li::marker { color: var(--red); }
+    ol.steps li { margin-bottom: 12px; }
+    ol.steps li::marker { color: var(--maroon); font-weight: 700; }
+
+    .emphasis { font-weight: 600; color: var(--ink); }
+
+    a {
+      color: var(--red);
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-color: rgba(200, 35, 44, 0.35);
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--red-dark); text-decoration-color: var(--red-dark); }
+    a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; border-radius: 2px; }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin: 4px 0 16px;
+      padding: 0;
+      list-style: none;
+    }
+    .rights-grid li {
+      background: var(--wash);
+      border: 1px solid var(--line-lo);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      font-weight: 600;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .contact {
+      background: var(--wash);
+      border: 1px solid var(--line-lo);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      margin-top: 6px;
+    }
+    .contact-row { display: flex; gap: 14px; align-items: baseline; padding: 6px 0; flex-wrap: wrap; }
+    .contact-row .label {
+      flex: 0 0 56px;
+      font-size: 11px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      font-weight: 600;
+    }
+
+    table.retention { width: 100%; border-collapse: collapse; margin: 4px 0 14px; font-size: 15px; }
+    table.retention th, table.retention td { text-align: left; padding: 10px 12px; border: 1px solid var(--line-lo); vertical-align: top; }
+    table.retention th { background: var(--wash); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
+
+    details { border-bottom: 1px solid var(--line-lo); padding: 12px 0; }
+    details summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+    details summary::marker { color: var(--red); }
+    details p { margin: 10px 0 0; color: var(--ink-2); }
+
+    footer { max-width: 760px; margin: 0 auto; padding: 0 24px 48px; color: var(--ink-2); font-size: 13px; text-align: center; }
+    footer nav { margin-bottom: 10px; }
+    footer nav a { margin: 0 8px; }
+
+    @media (max-width: 520px) {
+      .banner { padding: 32px 16px 48px; }
+      main { padding: 0 16px 48px; }
+      .card { padding: 4px 18px 26px; }
+      body { font-size: 15px; }
+      table.retention { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <div class="banner-inner">
+      <img class="logo" src="./assets/tag-connect-logo-on-dark.svg" alt="TAG Connect" width="203" height="60">
+      <p class="eyebrow">TAG Connect · Support</p>
+      <h1>Help and support</h1>
+      <p>Need help with the TAG Connect app? Contact our team or find a quick answer below.</p>
+      <p class="updated">Last updated: 3 November 2026</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <section>
+        <h2>Contact us</h2>
+        <p>TAG Connect is provided by TAG Construction Limited. Our team is here to help.</p>
+        <div class="contact">
+          <div class="contact-row">
+            <span class="label">Tel</span>
+            <span><a href="tel:01474365511">01474 365511</a> · Mon–Fri, 9am–6pm (UK time)</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <span><a href="mailto:support@tagconstructionltd.co.uk">support@tagconstructionltd.co.uk</a></span>
+          </div>
+        </div>
+        <p style="margin-top:16px;">In the app, you can also tap <span class="emphasis">?</span> on any screen, or go to <span class="emphasis">Profile → Help</span>.</p>
+      </section>
+
+      <section>
+        <h2>Common questions</h2>
+        <details>
+          <summary>Who can use TAG Connect?</summary>
+          <p>Anyone looking for construction work can download the app and sign up with their mobile number. You don't need to have worked for TAG before.</p>
+        </details>
+        <details>
+          <summary>How do I sign in?</summary>
+          <p>Enter your mobile number and we'll text you a one-time code. There's no password to remember.</p>
+        </details>
+        <details>
+          <summary>How long does verification take?</summary>
+          <p>Within 2 working days, usually the same day.</p>
+        </details>
+        <details>
+          <summary>My card isn't being read properly</summary>
+          <p>Use good light and place the card on a flat surface. If it still doesn't work, contact us and we'll help.</p>
+        </details>
+        <details>
+          <summary>How do I delete my account?</summary>
+          <p>In the app, go to <span class="emphasis">Settings → Delete my account</span>. You can also <a href="./delete-account.html">read how account deletion works</a>, including what the law makes us keep.</p>
+        </details>
+      </section>
+
+      <section>
+        <h2>Report a problem</h2>
+        <p>Email <a href="mailto:support@tagconstructionltd.co.uk?subject=Bug%20Report%20-%20TAG%20Connect">support@tagconstructionltd.co.uk</a> with the subject "Bug Report - TAG Connect". Tell us what happened and which phone you use. Please don't send photos of your ID or cards by email.</p>
+      </section>
+
+      <section>
+        <h2>Your data</h2>
+        <p>Read how we handle your data in our <a href="./index.html">Privacy Policy</a>, or see <a href="./delete-account.html">how to delete your account</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <nav><a href="./index.html">Privacy policy</a> · <a href="./delete-account.html">Delete account</a> · <a href="./support.html">Support</a></nav>
+    © 2026 TAG Construction Limited. All rights reserved.
+  </footer>
+</body>
+</html>

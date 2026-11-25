@@ -5,111 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — TAG Connect | TAG Construction Limited</title>
   <meta name="description" content="How TAG Construction Limited collects, uses, and protects your personal data in the TAG Connect app, in line with UK GDPR.">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <style>
+    /* TAG Connect design tokens (apps/mobile/constants/tokens.ts, mobile profile) */
     :root {
-      --maroon: #6e1d2a;
-      --maroon-dark: #531420;
-      --tag-red: #c0392f;
-      --ink: #20191b;
-      --muted: #5f5458;
-      --bone: #faf7f3;
-      --card: #ffffff;
-      --line: #e7ded9;
+      --maroon: #6B1015;
+      --maroon-hi: #581015;
+      --red: #C8232C;
+      --red-dark: #A41D25;
+      --ink: #1C1A18;
+      --ink-2: #4A4742;
+      --line: #DCD8D1;
+      --line-lo: #EEEAE3;
+      --wash: #FAF8F4;
+      --white: #FFFFFF;
+      --on-maroon-2: rgba(255, 255, 255, 0.85);
+      --on-maroon-3: rgba(255, 255, 255, 0.70);
+      --on-maroon-chip: rgba(255, 255, 255, 0.12);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
     }
 
     * { box-sizing: border-box; }
-
     html { -webkit-text-size-adjust: 100%; }
 
     body {
       margin: 0;
-      background: var(--bone);
+      background: var(--wash);
       color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-      font-size: 17px;
+      line-height: 1.6;
+      font-size: 16px;
     }
 
     .banner {
-      background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
-      color: #fff;
-      padding: 56px 24px 48px;
+      background: var(--maroon);
+      color: var(--white);
+      padding: 40px 24px 56px;
     }
-
-    .banner-inner {
-      max-width: 760px;
-      margin: 0 auto;
-    }
+    .banner-inner { max-width: 760px; margin: 0 auto; }
+    .logo { display: block; height: 60px; width: auto; max-width: 100%; margin: 0 0 28px -6px; }
 
     .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
+      display: inline-block;
+      background: var(--on-maroon-chip);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 4px 12px;
       font-size: 12px;
       font-weight: 600;
-      opacity: 0.82;
+      letter-spacing: 0.3px;
       margin: 0 0 14px;
     }
 
     .banner h1 {
-      font-size: clamp(28px, 6vw, 40px);
-      line-height: 1.15;
-      margin: 0 0 12px;
-      font-weight: 700;
+      font-size: clamp(26px, 4.5vw, 34px);
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      margin: 0 0 10px;
     }
+    .banner p { margin: 0; color: var(--on-maroon-2); font-size: 15px; line-height: 1.45; max-width: 560px; }
+    .banner .updated { margin-top: 16px; font-size: 13px; color: var(--on-maroon-3); }
 
-    .banner p {
-      margin: 0;
-      font-size: 17px;
-      max-width: 52ch;
-      opacity: 0.92;
-    }
-
-    .updated {
-      margin-top: 22px;
-      font-size: 13px;
-      opacity: 0.78;
-    }
-
-    main {
-      max-width: 760px;
-      margin: -24px auto 0;
-      padding: 0 24px 80px;
-    }
+    main { max-width: 760px; margin: -28px auto 0; padding: 0 24px 64px; }
 
     .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 8px 32px 36px;
-      box-shadow: 0 8px 30px rgba(110, 29, 42, 0.06);
+      background: var(--white);
+      border: 1px solid var(--line-lo);
+      border-radius: var(--radius-lg);
+      padding: 4px 28px 32px;
+      box-shadow: 0 2px 10px rgba(28, 26, 24, 0.06);
     }
 
     section { padding-top: 28px; }
 
     h2 {
-      font-size: 13px;
-      letter-spacing: 0.1em;
+      font-size: 12px;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--maroon);
       font-weight: 700;
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       padding-bottom: 8px;
-      border-bottom: 2px solid var(--line);
+      border-bottom: 1px solid var(--line-lo);
     }
+    h3 { font-size: 16px; font-weight: 600; margin: 18px 0 8px; color: var(--ink); }
 
     p { margin: 0 0 14px; }
-
-    ul {
-      margin: 0 0 14px;
-      padding-left: 22px;
-    }
-
+    ul, ol { margin: 0 0 14px; padding-left: 22px; }
     li { margin-bottom: 8px; }
+    ul li::marker { color: var(--red); }
+    ol.steps li { margin-bottom: 12px; }
+    ol.steps li::marker { color: var(--maroon); font-weight: 700; }
 
-    .emphasis {
-      font-weight: 600;
-      color: var(--maroon-dark);
+    .emphasis { font-weight: 600; color: var(--ink); }
+
+    a {
+      color: var(--red);
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-color: rgba(200, 35, 44, 0.35);
+      text-underline-offset: 3px;
     }
+    a:hover { color: var(--red-dark); text-decoration-color: var(--red-dark); }
+    a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; border-radius: 2px; }
 
     .rights-grid {
       display: grid;
@@ -119,11 +122,10 @@
       padding: 0;
       list-style: none;
     }
-
     .rights-grid li {
-      background: var(--bone);
-      border: 1px solid var(--line);
-      border-radius: 10px;
+      background: var(--wash);
+      border: 1px solid var(--line-lo);
+      border-radius: var(--radius-md);
       padding: 12px 14px;
       font-weight: 600;
       font-size: 15px;
@@ -131,201 +133,312 @@
     }
 
     .contact {
-      background: var(--bone);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 20px 22px;
+      background: var(--wash);
+      border: 1px solid var(--line-lo);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
       margin-top: 6px;
     }
-
-    .contact-row {
-      display: flex;
-      gap: 14px;
-      align-items: baseline;
-      padding: 6px 0;
-    }
-
+    .contact-row { display: flex; gap: 14px; align-items: baseline; padding: 6px 0; flex-wrap: wrap; }
     .contact-row .label {
       flex: 0 0 56px;
       font-size: 11px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.6px;
       text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 700;
-      padding-top: 2px;
+      color: var(--ink-2);
+      font-weight: 600;
     }
 
-    a {
-      color: var(--tag-red);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(192, 57, 47, 0.35);
-    }
+    table.retention { width: 100%; border-collapse: collapse; margin: 4px 0 14px; font-size: 15px; }
+    table.retention th, table.retention td { text-align: left; padding: 10px 12px; border: 1px solid var(--line-lo); vertical-align: top; }
+    table.retention th { background: var(--wash); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
 
-    a:hover { border-bottom-color: var(--tag-red); }
+    details { border-bottom: 1px solid var(--line-lo); padding: 12px 0; }
+    details summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+    details summary::marker { color: var(--red); }
+    details p { margin: 10px 0 0; color: var(--ink-2); }
 
-    a:focus-visible {
-      outline: 3px solid var(--tag-red);
-      outline-offset: 2px;
-      border-radius: 2px;
-    }
-
-    footer {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 24px 60px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
+    footer { max-width: 760px; margin: 0 auto; padding: 0 24px 48px; color: var(--ink-2); font-size: 13px; text-align: center; }
+    footer nav { margin-bottom: 10px; }
+    footer nav a { margin: 0 8px; }
 
     @media (max-width: 520px) {
-      .banner { padding: 44px 20px 40px; }
-      main { padding: 0 16px 60px; }
-      .card { padding: 4px 20px 28px; }
-      body { font-size: 16px; }
+      .banner { padding: 32px 16px 48px; }
+      main { padding: 0 16px 48px; }
+      .card { padding: 4px 18px 26px; }
+      body { font-size: 15px; }
+      table.retention { font-size: 14px; }
     }
+  
+    /* v2.0 additions */
+    .summary { background: var(--wash); border: 1px solid var(--line-lo); border-left: 3px solid var(--maroon);
+      border-radius: var(--radius-md); padding: 18px 20px; margin-top: 22px; }
+    .summary h3 { margin: 0 0 10px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--maroon); font-weight: 700; }
+    .summary ul { margin: 0; padding-left: 20px; }
+    .summary li { margin-bottom: 9px; font-size: 15.5px; }
+    .summary .note { margin: 12px 0 0; font-size: 13.5px; color: var(--ink-2); }
+    .ico { background: var(--wash); border: 1px solid var(--line); border-left: 3px solid var(--red);
+      border-radius: var(--radius-md); padding: 14px 18px; margin: 4px 0 8px; font-size: 15px; }
+    .ico b { display: block; margin-bottom: 4px; }
+    .tbl-wrap { overflow-x: auto; margin: 4px 0 14px; }
+    .tbl-wrap table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .tbl-wrap th, .tbl-wrap td { text-align: left; padding: 10px 12px; border: 1px solid var(--line-lo); vertical-align: top; }
+    .tbl-wrap th { background: var(--wash); font-size: 12px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
   </style>
 </head>
 <body>
   <header class="banner">
     <div class="banner-inner">
-      <p class="eyebrow">TAG Connect · Privacy Policy</p>
+      <img class="logo" src="./assets/tag-connect-logo-on-dark.svg" alt="TAG Connect" width="203" height="60">
+      <p class="eyebrow">TAG Connect &middot; Privacy Policy</p>
       <h1>Your data, your control</h1>
       <p>This policy explains how TAG Construction Limited collects, uses and protects your personal information when you use the TAG Connect app.</p>
-      <p class="updated">Version 1.1 · Last updated: 2 November 2026</p>
+      <p class="updated">Version 2.0 &middot; Last updated: 25 November 2026</p>
     </div>
   </header>
 
   <main>
     <div class="card">
-      <section>
-        <h2>Who we are</h2>
-        <p><span class="emphasis">TAG Construction Limited</span> is the data controller for TAG Connect — the company responsible for collecting, storing, and protecting your personal information in line with UK GDPR and the Data Protection Act 2018. We are registered in England, registered office 55 Bath Street, Gravesend, Kent, DA11 0DF.</p>
-      </section>
 
-      <section>
-        <h2>What we collect</h2>
-        <p>We collect:</p>
-        <ul>
-          <li>your name, email, contact number, date of birth, address, and National Insurance number</li>
-          <li>photos of identity documents (passport, driving licence), your profile photo and a selfie, which a TAG team member checks against your photo ID. We don't use automatic face matching.</li>
-          <li>qualification cards and certificates (CSCS, CPCS, NPORS and others)</li>
-          <li>health-related certificates where your work requires them — for example occupational health or drug-and-alcohol test certificates (see “Health-related documents” below)</li>
-          <li>work history, site attendance and deployment records, and site diary entries</li>
-          <li>messages you exchange with recruiters in the app</li>
-          <li>emergency contact details</li>
-          <li>technical information — device type, app version, sign-in and usage logs — which we use to keep the service secure and working</li>
-        </ul>
-        <p>We only collect what we need.</p>
-        <p><span class="emphasis">Two things worth knowing:</span> your emergency contact is another person’s information — please make sure they’re happy for you to share it. And a recruiter can sometimes upload a document on your behalf (for example, a card you handed over in person); when that happens, the document appears in your wallet and is treated exactly as if you uploaded it yourself.</p>
-      </section>
-
-      <section>
-        <h2>How your documents are processed</h2>
-        <p>Card and ID images are read by automated document-reading (AI) systems to extract the details printed on them. Extraction is automated, but verification decisions are made by people — a recruiter reviews your documents before anything appears as verified on your profile. The card image itself is the source of truth; extracted text is for convenience, and you can ask us to correct anything that was read wrongly.</p>
-        <p>The AI reading is performed by specialist AI providers acting under contract as our processors. This can involve your document images being processed on servers inside the UK; where that happens, the transfer is protected and the providers may not use your documents for their own purposes.</p>
-        <p>To keep the reading accurate, we use the documents you upload and the corrections you or our team make to operate and improve our document-reading systems. This never changes who owns your documents, and it never shares them beyond what this policy and your sharing choices allow.</p>
-      </section>
-
-      <section>
-        <h2>Health-related documents</h2>
-        <p>Some cards workers upload — occupational health certificates, drug-and-alcohol test results, medicals — contain health information, which the law treats with extra protection (“special category data”). We process these only where they are required for your work on site, relying on the employment-law condition under UK data protection law, and we hold them to the same security standard as everything else, with access limited to those who need it for compliance.</p>
-      </section>
-
-      <section>
-        <h2>Why we collect it — and our legal grounds</h2>
-        <p>Your data is used to manage your employment or deployment, verify your qualifications and right to work, track your site attendance, ensure health and safety compliance, and process your pay. UK GDPR requires us to name the legal ground for each purpose:</p>
-        <ul>
-          <li>Verifying your documents, managing your deployment, running your wallet and profile, processing your pay — performing our contract with you.</li>
-          <li>Right-to-work checks, HMRC and HSE reporting, health &amp; safety records, record-keeping the law requires — legal obligation.</li>
-          <li>Showing your wallet to recruiters and sites you apply to or are deployed to — your consent, given when you set up your account and withdrawable any time in Settings → Privacy.</li>
-          <li>Health-related certificates required for site work — the employment-law condition (special category data).</li>
-          <li>Keeping the service secure, preventing fraud, fixing problems, improving how the app and our document-reading work — our legitimate interests, balanced against your rights.</li>
-        </ul>
-        <p>If you don’t provide the basics — identity, right to work, required cards — we can’t verify you, and recruiters can’t deploy you. That’s not a penalty; it’s what the verification service is.</p>
-        <p class="emphasis">We do not sell your data. Ever.</p>
-      </section>
-
-      <section>
-        <h2>Your status</h2>
-        <p>TAG recruiters see your name, trade, cards, status and contact details so they can offer you work. Your ID, share code, selfie and nationality are only used to check who you are and that you can work in the UK. Your NI number is only used for pay.</p>
-        <p>Your status (for example “Verified”) shows whether TAG has checked your ID and right to work. Every verification decision is made by a person at TAG. No hiring or pay decision is made by the app itself — those are made by the employers and recruiters you deal with.</p>
-      </section>
-
-      <section>
-        <h2>How it's protected</h2>
-        <p>Your data is stored encrypted on secure servers, with access restricted to authorised personnel only. We use industry-standard security and conduct regular data protection audits. Your documents are never emailed in plain text. If a data breach ever put your rights at risk, we would tell you and the ICO as the law requires.</p>
-      </section>
-
-      <section>
-        <h2>Who we share with</h2>
-        <p>Your profile is private by default. No company or recruiter can see your data unless you apply to or are deployed to them. We may share relevant data with:</p>
-        <ul>
-          <li>client sites and recruiters you are deployed to or apply to (e.g. name, qualifications, right-to-work status)</li>
-          <li>regulatory bodies where legally required (e.g. HMRC, Health and Safety Executive)</li>
-          <li>payroll providers, to process your pay</li>
-          <li>service providers who run parts of the platform for us under contract and on our instructions — cloud hosting, SMS and notification delivery, and the AI document-reading providers described above</li>
-        </ul>
-        <p>We never share more than necessary.</p>
-      </section>
-
-      <section>
-        <h2>How long we keep it</h2>
-        <p>We keep your data for as long as you have an active account (in line with UK employment law). Financial records are kept for 7 years (HMRC requirement). Two categories work slightly differently: audit records of verification and compliance decisions are kept for the same statutory periods even if you close your account, and the record of the consents you gave or withdrew is kept as evidence of those consents. After the retention periods, your data is securely deleted. You can request deletion at any time — see <span class="emphasis">Your rights</span> below.</p>
-      </section>
-
-      <section>
-        <h2>Your rights</h2>
-        <p>Under UK GDPR you have the right to:</p>
-        <ul class="rights-grid">
-          <li>Access your data</li>
-          <li>Correct errors</li>
-          <li>Request deletion</li>
-          <li>Restrict processing</li>
-          <li>Data portability</li>
-          <li>Withdraw consent</li>
-          <li>Object to processing</li>
-        </ul>
-        <p>Withdrawing consent will not affect anything we processed before you withdrew it. You can withdraw at any time in <span class="emphasis">Settings → Privacy</span>.</p>
-        <p>You can delete your account at any time in the app: <span class="emphasis">Profile → Settings → Delete my account</span>. See <a href="./delete-account.html">Delete your account</a> for what is deleted and what the law makes us keep.</p>
-      </section>
-
-      <section>
-        <h2>How to exercise your rights</h2>
-        <p>To make a request, ask a question, or raise a concern about your data, contact:</p>
-        <div class="contact">
-          <div class="contact-row">
-            <span class="label">Email</span>
-            <span><a href="mailto:compliance@tagconstructionltd.co.uk">compliance@tagconstructionltd.co.uk</a></span>
-          </div>
-          <div class="contact-row">
-            <span class="label">Tel</span>
-            <span><a href="tel:01474365511">01474 365511</a></span>
-          </div>
-        </div>
-        <p style="margin-top:16px;">We may need to check your identity before acting on a request — usually by confirming details of your account. We respond within one month; if a request is complex we can extend by up to two further months, and we’ll tell you if so.</p>
-        <p>You also have the right to complain to the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener">ico.org.uk/make-a-complaint</a> or 0303 123 1113.</p>
-      </section>
-
-      <section>
-        <h2>Storage on your phone</h2>
-        <p>The app stores essential information on your device — your sign-in session and your settings — so it works properly. We don’t use advertising or tracking cookies, and we don’t track you across other apps or websites.</p>
-      </section>
-
-      <section>
-        <h2>Age</h2>
-        <p>TAG Connect is for people aged 18 or over. We don’t knowingly collect data from anyone younger; if you believe we have, contact us and we’ll delete it.</p>
-      </section>
-
-      <section>
-        <h2>Changes to this policy</h2>
-        <p>We may update this policy from time to time — for example when we add features or the law changes. If a change is material we’ll tell you in the app before it takes effect. The version line at the top shows when we last revised it.</p>
-      </section>
+    <div class="summary">
+      <h3>The short version</h3>
+      <ul>
+        <li>We are <strong>TAG Construction Limited</strong>. We look after your information. ICO registration <strong>ZA389594</strong>.</li>
+        <li>We hold your <strong>ID, your cards and your work record</strong> so you can prove you are qualified and get sent to work.</li>
+        <li><strong>Your profile is private.</strong> A company sees it when you apply to them or are sent to them. Nobody else.</li>
+        <li><strong>We never sell your data.</strong> We do not advertise to you. We do not track you across other apps.</li>
+        <li><strong>The app does not use your location.</strong> We use the postcode you type in, nothing more.</li>
+        <li><strong>A person, not a computer, makes every decision</strong> about your documents and about work.</li>
+        <li>You can <strong>see, correct, download or delete</strong> what we hold &mdash; and complain to us, or to the regulator.</li>
+      </ul>
+      <p class="note">This is a summary. The rest of this policy is the full detail.</p>
     </div>
+
+    <section>
+      <h2>1 &middot; Who we are</h2>
+      <p>TAG Construction Limited is the <strong>data controller</strong> for TAG Connect. That means we decide what information is collected and we are responsible for looking after it.</p>
+      <ul>
+        <li>Registered office: 55 Bath Street, Gravesend, Kent, DA11 0DF</li>
+        <li>Registered in England</li>
+        <li>ICO registration number: <strong>ZA389594</strong></li>
+      </ul>
+      <p>Questions about your information, and any request under section 2, go to our data protection contact &mdash; the details are in section 2.</p>
+    </section>
+
+    <section>
+      <h2>2 &middot; Your rights, and how to use them</h2>
+      <p>Under UK data protection law you can ask us to:</p>
+      <ul class="rights-grid">
+        <li>See what we hold about you</li>
+        <li>Correct anything wrong</li>
+        <li>Delete your information</li>
+        <li>Pause what we do with it</li>
+        <li>Send you a copy to take elsewhere</li>
+        <li>Stop a particular use</li>
+        <li>Withdraw permission you gave</li>
+      </ul>
+      <div class="contact">
+        <div class="contact-row"><span class="label">Email</span><span>compliance@tagconstructionltd.co.uk</span></div>
+        <div class="contact-row"><span class="label">Phone</span><span>0147 436 5511</span></div>
+        <div class="contact-row"><span class="label">In the app</span><span>Profile &rarr; Settings &rarr; Account, to delete your account yourself</span></div>
+      </div>
+      <p>We may need to check who you are first, usually by confirming details of your account. <strong>We answer within one month.</strong> If your request is complicated we can take up to two months more, and we will tell you if that happens.</p>
+      <p>Asking costs you nothing, and it will never affect your work with TAG.</p>
+    </section>
+
+    <section>
+      <h2>3 &middot; If you are unhappy</h2>
+      <p>Tell us first &mdash; email <strong>compliance@tagconstructionltd.co.uk</strong> and we will try to put it right.</p>
+      <p>If you are still unhappy, <strong>you have the right to complain to the Information Commissioner&rsquo;s Office (ICO)</strong>, the UK regulator. You do not need our permission and it is free.</p>
+      <div class="ico">
+        <b>Information Commissioner&rsquo;s Office</b>
+        ico.org.uk/make-a-complaint &middot; Helpline 0303 123 1113<br>
+        Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF
+      </div>
+    </section>
+
+    <section>
+      <h2>4 &middot; What we collect</h2>
+      <h3>You give us</h3>
+      <ul>
+        <li>your name, phone number, email address, date of birth, address and National Insurance number</li>
+        <li>photographs of identity documents &mdash; passport, driving licence, share code or residence permit</li>
+        <li>a photograph of yourself, taken when you verify your identity</li>
+        <li>your qualification cards and certificates &mdash; CSCS, CPCS, NPORS and others</li>
+        <li>health-related certificates where the work needs them &mdash; occupational health, drug and alcohol tests, medicals, face-fit, eye and hearing tests</li>
+        <li>your work history, trade and the jobs you have done</li>
+        <li>your emergency contact</li>
+        <li>messages you send recruiters in the app</li>
+      </ul>
+      <h3>We create or record</h3>
+      <ul>
+        <li>your site attendance, placements and site diary entries</li>
+        <li>your <strong>Verified</strong> status, your <strong>Skill Score</strong> and your <strong>Activity</strong> (section 8)</li>
+        <li>sign-in records, the type of device you use and the app version, to keep the service working and secure</li>
+        <li>a notification token for your device, so we can send you alerts</li>
+      </ul>
+      <h3>We get from other places</h3>
+      <ul>
+        <li>documents a recruiter uploads for you &mdash; for example a card you handed in at the office</li>
+        <li>your details from TAG&rsquo;s own records if you have worked for TAG before (section 5)</li>
+        <li>the town and approximate area for the <strong>postcode you type in</strong></li>
+      </ul>
+      <p><strong>Two things worth knowing.</strong> Your emergency contact is someone else&rsquo;s information &mdash; please check they are happy for you to give it. And when a recruiter uploads a document for you, it appears in your wallet and is treated exactly as if you had uploaded it yourself.</p>
+      <h3>What we do not collect</h3>
+      <p>The app does <strong>not</strong> ask for or use your phone&rsquo;s location. It has no advertising code and no tracking code in it. We do not follow you across other apps or websites, and we do not build an advertising profile of you.</p>
+    </section>
+
+    <section>
+      <h2>5 &middot; If you worked with TAG before you had the app</h2>
+      <p>If you have worked with TAG before, we may already hold your details, your cards and your documents from our own records. When your TAG Connect account is matched to those records, they appear in your profile.</p>
+      <p>We got that information from <strong>TAG&rsquo;s own files and systems</strong>, not from a third party or a public source. You have all the rights in section 2 over it, exactly as if you had given it to us yourself.</p>
+    </section>
+
+    <section>
+      <h2>6 &middot; Why we use it, and our legal grounds</h2>
+      <p>The law makes us name a legal ground for each thing we do with your information. Here is every one of them. <strong>Nothing we do with your information sits outside this table.</strong></p>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>What we do</th><th>Why</th><th>Legal ground</th></tr></thead>
+        <tbody>
+          <tr><td>Run your profile and wallet, check your documents, put you forward for work, manage your placement, pay you</td><td>It is the service you signed up for</td><td><strong>Contract</strong></td></tr>
+          <tr><td>Right to work checks, HMRC and HSE reporting, health and safety records, keeping records the law says we must</td><td>We have to</td><td><strong>Legal obligation</strong></td></tr>
+          <tr><td>Show your profile to a company you apply to or are sent to</td><td>They cannot accept you on site without it</td><td><strong>Contract</strong></td></tr>
+          <tr><td>Hold health-related certificates that a site requires</td><td>Employment law allows it</td><td><strong>Employment-law condition</strong><br>Art. 9(2)(b), DPA 2018 Sch. 1</td></tr>
+          <tr><td>Keep the service secure, stop fraud, fix faults, improve how TAG&rsquo;s own software reads documents</td><td>A genuine business need, weighed against your privacy</td><td><strong>Legitimate interests</strong></td></tr>
+          <tr><td>Send you marketing, if you chose to get it</td><td>You said yes, and you can say no at any time</td><td><strong>Consent</strong></td></tr>
+        </tbody>
+      </table></div>
+      <p><strong>If you do not give us the basics</strong> &mdash; your identity, your right to work, the cards the job needs &mdash; we cannot verify you and recruiters cannot send you to work. That is not a penalty. It is what the service is.</p>
+      <p><strong>We do not sell your data. Ever.</strong></p>
+    </section>
+
+    <section>
+      <h2>7 &middot; How your documents are read</h2>
+      <p>When you photograph a card or an identity document, TAG&rsquo;s own in-house software reads the details printed on it, so you do not have to type them. Here is exactly what happens:</p>
+      <ol class="steps">
+        <li>The photograph is stored securely on TAG&rsquo;s servers.</li>
+        <li>TAG&rsquo;s software reads the printed details. Where any part of the service is run for us by a provider, they act under contract and only on our instructions, and may not use your documents for their own purposes or to train their systems on them.</li>
+        <li><strong>A member of TAG staff then looks at it.</strong> They see your photograph alongside what the software read and how confident it was, so anything read wrongly is corrected.</li>
+        <li>Only then does anything appear as verified on your profile.</li>
+      </ol>
+      <p><strong>The photograph is what counts.</strong> The text read from it is for convenience. If something was read wrongly, tell us and we will fix it.</p>
+      <p>We use the documents you upload and the corrections our team makes to keep TAG&rsquo;s own software accurate. Your documents stay yours, and this never shares them beyond what this policy allows.</p>
+    </section>
+
+    <section>
+      <h2>8 &middot; Verified, Skill Score and Activity</h2>
+      <p>Your profile carries three things that recruiters can see:</p>
+      <ul>
+        <li><strong>Verified</strong> &mdash; whether TAG has checked your identity and your right to work.</li>
+        <li><strong>Skill Score</strong> &mdash; points worked out from the qualifications we have checked. It uses the grade printed on your card and never guesses one.</li>
+        <li><strong>Activity</strong> &mdash; how recently you have used TAG Connect.</li>
+      </ul>
+      <p>When a job comes in, TAG&rsquo;s own software suggests workers whose qualifications, skills, area, availability, Verified status and past placements fit it. <strong>It does not use your age, date of birth, nationality, language, sex or name to do this.</strong></p>
+      <p>This is <strong>profiling</strong> in law, so you should know:</p>
+      <ul>
+        <li><strong>A recruiter always decides</strong> who is put forward and who is placed. <strong>A member of TAG staff always decides</strong> whether you are Verified.</li>
+        <li><strong>No decision that affects you legally or similarly significantly is made by the app on its own.</strong></li>
+        <li>If you think a status or a score is wrong, ask us and a person will look at it. Section 2 tells you how.</li>
+        <li>Your score goes up as you add and renew documents.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9 &middot; The photograph of your face</h2>
+      <p>When you verify your identity you take a photograph of yourself.</p>
+      <ul>
+        <li><strong>A member of TAG staff compares it with the photograph on your document.</strong> We do <strong>not</strong> use face recognition software.</li>
+        <li>The photograph is deleted <strong>within 90 days</strong> of the check.</li>
+        <li>The document images and this photograph are held <strong>for reference</strong>. They are not the legal right to work check &mdash; a member of TAG staff does that by looking at your original document.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>10 &middot; Who we share it with</h2>
+      <p>Your profile is private. No company and no recruiter sees it unless you apply to them or are sent to them.</p>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Who</th><th>What they get, and why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Companies and sites</strong> you apply to or are sent to</td><td>Your name, trade, checked qualifications and right to work status, so they can accept you on site</td></tr>
+          <tr><td><strong>TAG&rsquo;s own systems</strong></td><td>Our recruitment, compliance and payroll teams. These are run by TAG Construction Limited and are not third parties</td></tr>
+          <tr><td><strong>Public authorities</strong>, where the law requires</td><td>HM Revenue &amp; Customs, the Home Office, the Health and Safety Executive</td></tr>
+          <tr><td><strong>Payroll</strong></td><td>To pay you</td></tr>
+          <tr><td><strong>Companies that run parts of the service for us</strong>, under contract and on our instructions</td><td>Hosting and secure storage, sending text messages and notifications, and fault reporting. Fault reports have your name, contact details and anything you typed stripped out first. They act only on our instructions and may not use your information for their own purposes</td></tr>
+        </tbody>
+      </table></div>
+      <p>Downloading the app is a matter between you and the app store you use. <strong>We do not give the app store your profile, your documents or your messages.</strong></p>
+      <p>Notifications about messages may show the sender&rsquo;s name and the start of the message on your lock screen. You can turn previews off in your phone&rsquo;s settings.</p>
+    </section>
+
+    <section>
+      <h2>11 &middot; Where your information is kept</h2>
+      <p><strong>Your profile, your documents and your photographs are held on TAG&rsquo;s own servers.</strong> Only TAG, and the companies that run parts of the service for us under contract, can reach them.</p>
+      <p>Some technical services that deliver messages and notifications to your phone operate internationally. Only what is needed to deliver the message reaches them, and it is protected by safeguards approved under UK law. You can ask us for details.</p>
+    </section>
+
+    <section>
+      <h2>12 &middot; How long we keep it</h2>
+      <p><strong>We do not keep your information for longer than we need to.</strong> Where the law sets how long a record must be kept &mdash; tax, right to work, health and safety &mdash; we keep it for exactly that long and no longer. Where the law leaves the period to us, we set one, write it down and review it.</p>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>What</th><th>How long</th></tr></thead>
+        <tbody>
+          <tr><td>Your profile and records &mdash; including imported profiles, qualifications, CV, messages, recruiter notes and job records</td><td><strong>Active for 5 years</strong> after you last use TAG Connect or work with us. Then moved to a <strong>locked archive</strong>, reviewed every 2 years and deleted when there is no longer a reason to keep it. Many workers come back to TAG; if you come back, your profile wakes up</td></tr>
+          <tr><td>Pay, hours, holiday, contract and placement records</td><td><strong>7 years</strong> after your work ends &mdash; tax and minimum wage law</td></tr>
+          <tr><td>Right to work evidence, identity document copies and Home Office check results</td><td><strong>2 years</strong> after your employment ends &mdash; immigration law. If you never worked for TAG, they go when your profile goes</td></tr>
+          <tr><td>The photograph of your face</td><td><strong>90 days</strong> from the check</td></tr>
+          <tr><td>Document photographs you started but never submitted</td><td><strong>7 days</strong></td></tr>
+          <tr><td>Sign-in attempt records</td><td><strong>183 days</strong></td></tr>
+          <tr><td>Your account, after you ask us to delete it</td><td>Deleted <strong>within 12 days</strong>. You can change your mind in the first 7 days. We keep only what the law requires us to keep</td></tr>
+        </tbody>
+      </table></div>
+      <p>A deletion request always overrides the periods above, except where the law requires us to keep something &mdash; and where it does, we keep only what the law asks for, and only for as long as it asks.</p>
+    </section>
+
+    <section>
+      <h2>13 &middot; How we protect it</h2>
+      <p>Your information is encrypted and kept on secure servers, and only staff who need it can see it. Personal details are hidden by default on our screens, and revealed only when there is a reason &mdash; which is recorded. We never email your documents in plain text. If a breach ever put you at risk, we would tell you and the ICO, as the law requires.</p>
+    </section>
+
+    <section>
+      <h2>14 &middot; What is stored on your phone</h2>
+      <p>The app keeps your sign-in session in your phone&rsquo;s secure storage &mdash; the Keychain on iPhone, the Keystore on Android &mdash; and keeps a copy of your home screen so it loads quickly.</p>
+      <p><strong>There are no advertising cookies and no tracking code in this app.</strong></p>
+      <p>The app asks for:</p>
+      <ul>
+        <li><strong>your camera</strong>, to photograph cards and documents</li>
+        <li><strong>your photos</strong>, if you want to upload a picture you already have</li>
+        <li><strong>notifications</strong>, so we can tell you when a document is verified or is about to expire</li>
+      </ul>
+      <p>You can refuse or withdraw any of these in your phone&rsquo;s settings. The app does <strong>not</strong> ask for your location.</p>
+    </section>
+
+    <section>
+      <h2>15 &middot; Messages we send you</h2>
+      <p>To run the service we send you sign-in codes by text message and notifications about your documents and your work. These are part of the service and you cannot turn them off while you have an account, though you can control how they appear on your phone.</p>
+      <p><strong>Marketing is separate.</strong> We only send it if you choose it, and you can stop it at any time without it affecting anything else.</p>
+    </section>
+
+    <section>
+      <h2>16 &middot; Age</h2>
+      <p>TAG Connect is for people aged <strong>16 or over</strong>. We do not knowingly collect information from anyone younger. If you think we have, tell us and we will delete it.</p>
+    </section>
+
+    <section>
+      <h2>17 &middot; Languages</h2>
+      <p>We may provide this policy in other languages, such as Punjabi, to make it easier to read. Translations are for convenience. If the meaning differs, the English version applies.</p>
+    </section>
+
+    <section>
+      <h2>18 &middot; Changes to this policy</h2>
+      <p>We may update this policy &mdash; for example when we add a feature or the law changes. <strong>If a change matters to you, we will tell you in the app before it takes effect.</strong> The version and date at the top show when we last revised it, and past versions are available on request.</p>
+    </section>
+
+  </div>
   </main>
 
   <footer>
-    © 2026 TAG Construction Limited. All rights reserved.
+    <nav><a href="./index.html">Privacy policy</a> &middot; <a href="./delete-account.html">Delete account</a> &middot; <a href="./support.html">Support</a></nav>
+    &copy; 2026 TAG Construction Limited. All rights reserved.
   </footer>
 </body>
 </html>
